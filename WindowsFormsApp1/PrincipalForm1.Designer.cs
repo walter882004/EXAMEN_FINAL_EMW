@@ -38,7 +38,7 @@
             this.toolsUbicaciones = new System.Windows.Forms.ToolStripButton();
             this.toolsEdificios = new System.Windows.Forms.ToolStripButton();
             this.toolsBajas = new System.Windows.Forms.ToolStripButton();
-            this.toolsRepuestos = new System.Windows.Forms.ToolStripButton();
+            this.toolsResponsables = new System.Windows.Forms.ToolStripButton();
             this.toolsTransferencias = new System.Windows.Forms.ToolStripButton();
             this.toolsTipoEquipo = new System.Windows.Forms.ToolStripButton();
             this.toolStrip1.SuspendLayout();
@@ -62,7 +62,7 @@
             this.toolsUbicaciones,
             this.toolsEdificios,
             this.toolsBajas,
-            this.toolsRepuestos,
+            this.toolsResponsables,
             this.toolsTransferencias,
             this.toolsTipoEquipo});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
@@ -134,14 +134,14 @@
             this.toolsBajas.Text = "Bajas";
             this.toolsBajas.Click += new System.EventHandler(this.toolsBajas_Click);
             // 
-            // toolsRepuestos
+            // toolsResponsables
             // 
-            this.toolsRepuestos.Image = ((System.Drawing.Image)(resources.GetObject("toolsRepuestos.Image")));
-            this.toolsRepuestos.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolsRepuestos.Name = "toolsRepuestos";
-            this.toolsRepuestos.Size = new System.Drawing.Size(81, 22);
-            this.toolsRepuestos.Text = "Repuestos";
-            this.toolsRepuestos.Click += new System.EventHandler(this.toolsRepuestos_Click);
+            this.toolsResponsables.Image = ((System.Drawing.Image)(resources.GetObject("toolsResponsables.Image")));
+            this.toolsResponsables.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolsResponsables.Name = "toolsResponsables";
+            this.toolsResponsables.Size = new System.Drawing.Size(98, 22);
+            this.toolsResponsables.Text = "Responsables";
+            this.toolsResponsables.Click += new System.EventHandler(this.toolsRepuestos_Click);
             // 
             // toolsTransferencias
             // 
@@ -190,7 +190,7 @@
         private System.Windows.Forms.ToolStripButton toolsUbicaciones;
         private System.Windows.Forms.ToolStripButton toolsEdificios;
         private System.Windows.Forms.ToolStripButton toolsBajas;
-        private System.Windows.Forms.ToolStripButton toolsRepuestos;
+        private System.Windows.Forms.ToolStripButton toolsResponsables;
         private System.Windows.Forms.ToolStripButton toolsTransferencias;
         private System.Windows.Forms.ToolStripButton toolsTipoEquipo;
     }

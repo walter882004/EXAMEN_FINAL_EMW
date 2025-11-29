@@ -84,11 +84,11 @@
     <Compile Include="ProveedoresFmr.Designer.cs">
       <DependentUpon>ProveedoresFmr.cs</DependentUpon>
     </Compile>
-    <Compile Include="RepuestosFrm.cs">
+    <Compile Include="Responsables.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="RepuestosFrm.Designer.cs">
-      <DependentUpon>RepuestosFrm.cs</DependentUpon>
+    <Compile Include="Responsables.Designer.cs">
+      <DependentUpon>Responsables.cs</DependentUpon>
     </Compile>
     <Compile Include="TecnicosFrm.cs">
       <SubType>Form</SubType>
@@ -132,8 +132,14 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Responsables.resx">
+      <DependentUpon>Responsables.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="TecnicosFrm.resx">
       <DependentUpon>TecnicosFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TranferenciasFrm.resx">
+      <DependentUpon>TranferenciasFrm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UbicacionesFrm.resx">
       <DependentUpon>UbicacionesFrm.cs</DependentUpon>
