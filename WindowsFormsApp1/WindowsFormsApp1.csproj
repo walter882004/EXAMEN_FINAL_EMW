@@ -132,8 +132,14 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="ProveedoresFmr.resx">
+      <DependentUpon>ProveedoresFmr.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="TecnicosFrm.resx">
       <DependentUpon>TecnicosFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TipoEquipoFrm.resx">
+      <DependentUpon>TipoEquipoFrm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UbicacionesFrm.resx">
       <DependentUpon>UbicacionesFrm.cs</DependentUpon>
