@@ -135,11 +135,17 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Responsables.resx">
+      <DependentUpon>Responsables.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ProveedoresFmr.resx">
       <DependentUpon>ProveedoresFmr.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="TecnicosFrm.resx">
       <DependentUpon>TecnicosFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TranferenciasFrm.resx">
+      <DependentUpon>TranferenciasFrm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="TipoEquipoFrm.resx">
       <DependentUpon>TipoEquipoFrm.cs</DependentUpon>
