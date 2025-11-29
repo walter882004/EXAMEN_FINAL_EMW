@@ -68,7 +68,7 @@ namespace WindowsFormsApp1
 
         private void toolsRepuestos_Click(object sender, EventArgs e)
         {
-            RepuestosFrm frm = new RepuestosFrm();
+            Responsables frm = new Responsables();
             frm.MdiParent = this;  //lo abre dentro del formulario principal
             frm.Show();
 
