@@ -52,6 +52,7 @@
     <Compile Include="BajasFrm.Designer.cs">
       <DependentUpon>BajasFrm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Conexion.cs" />
     <Compile Include="EdificiosFrm.cs">
       <SubType>Form</SubType>
     </Compile>
