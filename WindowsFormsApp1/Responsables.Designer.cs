@@ -42,12 +42,12 @@
             this.label2 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.cbResponsable = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
             this.splitContainer1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cbResponsable)).BeginInit();
             this.SuspendLayout();
             // 
             // splitContainer1
@@ -72,10 +72,11 @@
             this.splitContainer1.Panel1.Controls.Add(this.label2);
             this.splitContainer1.Panel1.Controls.Add(this.textBox1);
             this.splitContainer1.Panel1.Controls.Add(this.label1);
+            this.splitContainer1.Panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.splitContainer1_Panel1_Paint);
             // 
             // splitContainer1.Panel2
             // 
-            this.splitContainer1.Panel2.Controls.Add(this.dataGridView1);
+            this.splitContainer1.Panel2.Controls.Add(this.cbResponsable);
             this.splitContainer1.Size = new System.Drawing.Size(800, 450);
             this.splitContainer1.SplitterDistance = 266;
             this.splitContainer1.TabIndex = 0;
@@ -197,18 +198,20 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Nombre";
             // 
-            // dataGridView1
+            // cbResponsable
             // 
-            this.dataGridView1.AllowUserToAddRows = false;
-            this.dataGridView1.AllowUserToDeleteRows = false;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView1.Location = new System.Drawing.Point(0, 0);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(530, 450);
-            this.dataGridView1.TabIndex = 0;
+            this.cbResponsable.AllowUserToAddRows = false;
+            this.cbResponsable.AllowUserToDeleteRows = false;
+            this.cbResponsable.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.cbResponsable.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.cbResponsable.Location = new System.Drawing.Point(0, 0);
+            this.cbResponsable.Name = "cbResponsable";
+            this.cbResponsable.ReadOnly = true;
+            this.cbResponsable.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.cbResponsable.Size = new System.Drawing.Size(530, 450);
+            this.cbResponsable.TabIndex = 0;
+            this.cbResponsable.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.cbResponsable_CellContentClick);
+            this.cbResponsable.Click += new System.EventHandler(this.cbResponsable_Click);
             // 
             // Responsables
             // 
@@ -224,7 +227,7 @@
             this.splitContainer1.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
             this.splitContainer1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cbResponsable)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -245,6 +248,6 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView cbResponsable;
     }
 }

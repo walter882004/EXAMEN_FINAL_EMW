@@ -87,7 +87,12 @@ namespace WindowsFormsApp1
                 dataGridView1.DataSource = Ubicacione.Obtener();
             limpiar();
            }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
+    }
     }
 
 

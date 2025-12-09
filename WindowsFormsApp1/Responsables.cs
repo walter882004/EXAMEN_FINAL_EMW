@@ -22,12 +22,19 @@ namespace WindowsFormsApp1
 
         private void Responsables_Load(object sender, EventArgs e)
         {
-            dataGridView1.DataSource = Responsable.Obtener();
-            if (dataGridView1.Columns.Count > 0)
+            cbResponsable.DataSource = Responsable.Obtener();
+            if (cbResponsable.Columns.Count > 0)
             {
-                dataGridView1.Columns["id"].Visible = false;
+                cbResponsable.Columns["id"].Visible = false;
 
             }
+            cbResponsable.DataMember = "nombre";
+            cbResponsable.ValueMember = "id";
+            
+
+
+
+
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -47,7 +54,7 @@ namespace WindowsFormsApp1
                 resultado = Responsable.Editar(Responsable_id, nombre, Dni, Cargo, Telefono, Email);
             }
 
-            dataGridView1.DataSource = Responsable.Obtener();
+            cbResponsable.DataSource = Responsable.Obtener();
             Limpiar();
         }
 
@@ -61,12 +68,12 @@ namespace WindowsFormsApp1
 
         private void button2_Click(object sender, EventArgs e)
         {
-            textBox1.Text = dataGridView1.CurrentRow.Cells["nombre"].Value.ToString();
-            textBox2.Text = dataGridView1.CurrentRow.Cells["dni"].Value.ToString();
-            txtca.Text = dataGridView1.CurrentRow.Cells["Cargo"].Value.ToString();
-            textBox3.Text = dataGridView1.CurrentRow.Cells["Telefono"].Value.ToString();
-            textBox4.Text = dataGridView1.CurrentRow.Cells["Email"].Value.ToString();
-            Responsable_id = Convert.ToInt32(dataGridView1.CurrentRow.Cells["id"].Value);
+            textBox1.Text = cbResponsable.CurrentRow.Cells["nombre"].Value.ToString();
+            textBox2.Text = cbResponsable.CurrentRow.Cells["dni"].Value.ToString();
+            txtca.Text = cbResponsable.CurrentRow.Cells["Cargo"].Value.ToString();
+            textBox3.Text = cbResponsable.CurrentRow.Cells["Telefono"].Value.ToString();
+            textBox4.Text = cbResponsable.CurrentRow.Cells["Email"].Value.ToString();
+            Responsable_id = Convert.ToInt32(cbResponsable.CurrentRow.Cells["id"].Value);
         }
 
         private void txtca_SelectedIndexChanged(object sender, EventArgs e)
@@ -76,14 +83,29 @@ namespace WindowsFormsApp1
 
         private void button3_Click(object sender, EventArgs e)
         {
-            int id = Convert.ToInt32(dataGridView1.CurrentRow.Cells["id"].Value.ToString());
+            int id = Convert.ToInt32(cbResponsable.CurrentRow.Cells["id"].Value.ToString());
             bool resultado = Responsable.Eliminar(id);
             if (resultado)
             {
                 MessageBox.Show("Cliente Eliminado Correctamente");
             }
-            dataGridView1.DataSource = Responsable.Obtener();
+            cbResponsable.DataSource = Responsable.Obtener();
             Limpiar();
+        }
+
+        private void cbResponsable_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void cbResponsable_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void splitContainer1_Panel1_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }
