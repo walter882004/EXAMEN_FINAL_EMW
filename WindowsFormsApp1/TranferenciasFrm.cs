@@ -34,7 +34,7 @@ namespace WindowsFormsApp1
             }
             cbEquipo.DataSource = Equipo.Obtener();
             cbEquipo.DisplayMember = "nombre";
-            cbEquipo.ValueMember = "id";
+            cbEquipo.ValueMember = "";
         }
 
     }

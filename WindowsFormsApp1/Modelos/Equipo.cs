@@ -17,7 +17,7 @@ namespace WindowsFormsApp1.Modelos
             try
             {
                 cnn.Conectar();
-                String consulta = "SELECT * FROM Equipos order by id desc";
+                String consulta = "select  m.nombre from equipos e inner join marcas  m on e.marca_id = m.id;";
                 SqlCommand comando = new SqlCommand(consulta, cnn.Conectar());
                 SqlDataAdapter adaptador = new SqlDataAdapter(comando);
                 DataTable dt = new DataTable();
