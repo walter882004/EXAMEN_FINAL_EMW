@@ -18,24 +18,24 @@ namespace WindowsFormsApp1.Modelos
             {
                 using (SqlConnection conn = cnn.Conectar())
                 {
-                    string consulta = @"
-                SELECT 
-                    e.id,
-                    e.modelo AS nombre
-                FROM equipos e
-                ORDER BY e.id DESC;
-            ";
+                    cnn.Conectar();
+                    string query = "SELECT * FROM Equipos";
+                    SqlDataAdapter adapter = new SqlDataAdapter(query, conn);
+                    DataTable equiposTable = new DataTable();
+                    adapter.Fill(equiposTable);
+                    return equiposTable;
 
-                    SqlDataAdapter da = new SqlDataAdapter(consulta, conn);
-                    DataTable dt = new DataTable();
-                    da.Fill(dt);
-                    return dt;
                 }
             }
             catch (Exception ex)
             {
                 MessageBox.Show("Error al obtener equipos:\n" + ex.Message);
                 return null;
+            }
+
+            finally
+            {
+                cnn.Desconectar();
             }
         }
     }
